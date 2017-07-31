@@ -8,6 +8,8 @@ import { FooditemComponent } from './fooditem/fooditem.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
 import {FormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module";
+import {IngredientService} from "./ingredient.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import {AppRoutingModule} from "./app-routing.module";
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [IngredientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

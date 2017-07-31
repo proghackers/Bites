@@ -8,11 +8,18 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class IngredientService {
 
+  getIngredients(): Promise<any> {
+    return this.http.get(environment.backendUrl+ 'ingredient').
+      toPromise()
+      .then(response => response.json() as any)
+      .catch(this.handleError);
+  }
+
   saveIngredient(ingredient: Ingredient): Promise<any> {
     let headers = new Headers();
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json');
-    return this.http.post(environment.backendUrl+ 'requestrole', ingredient, {headers: headers})
+    return this.http.post(environment.backendUrl+ 'ingredient', ingredient, {headers: headers})
       .toPromise()
       .then(response => response.json as any)
       .catch(this.handleError);

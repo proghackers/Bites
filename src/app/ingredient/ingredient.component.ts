@@ -19,7 +19,7 @@ export class IngredientComponent implements OnInit {
 
   submit() {
     this.ingredientService.saveIngredient(this.newIngredient).then(response => {
-
+      console.log(response);
     })
   }
 
