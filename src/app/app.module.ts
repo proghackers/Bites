@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { FooditemComponent } from './fooditem/fooditem.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
+import {FormsModule} from "@angular/forms";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { IngredientComponent } from './ingredient/ingredient.component';
     IngredientComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
