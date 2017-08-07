@@ -12,6 +12,9 @@ import {IngredientService} from "./ingredient.service";
 import {HttpModule} from "@angular/http";
 import { GeodataComponent } from './geodata/geodata.component';
 import { UserComponent } from './user/user.component';
+import {UserService} from "./user.service";
+import {GeodataService} from "./geodata.service";
+import {FoodItemService} from "./fooditem.service";
 
 @NgModule({
   declarations: [
@@ -29,7 +32,12 @@ import { UserComponent } from './user/user.component';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [IngredientService],
+  providers: [
+    IngredientService,
+    UserService,
+    GeodataService,
+    FoodItemService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
