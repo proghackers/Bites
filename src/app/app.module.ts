@@ -10,6 +10,8 @@ import {FormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module";
 import {IngredientService} from "./ingredient.service";
 import {HttpModule} from "@angular/http";
+import { GeodataComponent } from './geodata/geodata.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {HttpModule} from "@angular/http";
     HomeComponent,
     RestaurantComponent,
     FooditemComponent,
-    IngredientComponent
+    IngredientComponent,
+    GeodataComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
