@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +15,7 @@ import { UserComponent } from './user/user.component';
 import {UserService} from "./user.service";
 import {GeodataService} from "./geodata.service";
 import {FoodItemService} from "./fooditem.service";
+import { DronearComponent } from './dronear/dronear.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +25,10 @@ import {FoodItemService} from "./fooditem.service";
     FooditemComponent,
     IngredientComponent,
     GeodataComponent,
-    UserComponent
+    UserComponent,
+    DronearComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
     FormsModule,

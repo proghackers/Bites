@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
 import {IngredientComponent} from "./ingredient/ingredient.component";
-const ROUTES: Routes = [
-  { path: '', component: HomeComponent},
-  {path: 'ingredient', component: IngredientComponent},
+import {DronearComponent} from "./dronear/dronear.component";
 
-  // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+const ROUTES: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'ingredient', component: IngredientComponent},
+  {path: 'future', component: DronearComponent}
 ];
 
 @NgModule({
@@ -15,4 +15,5 @@ const ROUTES: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
